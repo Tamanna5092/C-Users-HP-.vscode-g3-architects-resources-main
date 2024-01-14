@@ -1,7 +1,7 @@
-/* wark sans font family form google */
- @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
- *{
-  font-family: "Work Sans",
+/* work sans font family form google */ 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+ *{ 
+  font-family: "Work Sans";
  }
  /* shared style */
  .btn-primary{
@@ -18,6 +18,11 @@
  .text-light-gray{
   color: var(--Dark-03, #727272);
  }
+ .section-title{
+  color: #131313; 
+  font-size: 45px;
+  font-weight: 700;
+}
  header{
   background: rgba(255, 144, 14, 0.10);
   padding: 50px 240px;
@@ -28,11 +33,6 @@
   justify-content: space-between;
   align-items: center;
  }
- .nav-title{
-  color: #131313; 
-  font-size: 45px;
-  font-weight: 700;
-}
  nav > ul{
   display: flex; 
  }
@@ -95,6 +95,42 @@ main{
   color: #FF900E;
   font-weight: 700; 
 }
+.facts-card-container{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.facts-card-container .card{
+  border-radius: 8px;
+  border: 1px solid #FF900E;
+  padding: 35px;
+}
+.facts-card-container .card-title{
+  font-size: 20px;
+  font-weight: 600; 
+  color: var(--Dark-02, #424242);
+  margin-top: 5px;
+}
+.facts-card-container .card-stats{
+  color: var(--Dark-02, #424242);
+  font-size: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* sponsors style */
+.sponsors{
+  text-align: center;
+}
+.sponsors-img-container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+}
+.sponsors-img-container img{
+  width: 165px;
+}
 
 /* responsive media queries */
 /* mobile device */
@@ -102,15 +138,18 @@ main{
   header{
     padding: 10px;
   }
-  nav, .teams-container{
+  nav, .teams-container, .facts-card-container, .sponsors-img-container{
     flex-direction: column;
   }
   .teams-img-container{
     grid-template-columns: 1fr;
   }
-  .teams-content{
+  .teams-content, .facts-card-container{
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .facts-card-container{
+    gap: 20px;
   }
 }
 /* table or medium device */
@@ -118,7 +157,7 @@ main{
      header{
     padding: 50px;
   }
-    nav, .teams-container{
+    nav, .teams-container, .sponsors-img-container{
       flex-direction: column;
     }
 }
