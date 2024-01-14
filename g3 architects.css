@@ -169,6 +169,16 @@ main{
 .sponsors-img-container img{
   width: 165px;
 }
+/* footer section style */
+footer{
+  border-radius: 8px;
+  background: #FFF4E7;
+  text-align: center;
+  color:  #424242;
+  font-size: 20px;
+  margin: 20px 100px; 
+  padding: 30px 
+}
 
 /* responsive media queries */
 /* mobile device */
@@ -197,6 +207,9 @@ main{
     position: static;
     max-width: 300px;
   }
+  footer{
+    margin: 20px 10px;
+  }
 }
 /* table or medium device */
 @media screen and (min-width:576px) and (max-width:960px) {
@@ -205,5 +218,8 @@ main{
   }
     nav, .teams-container, .sponsors-img-container, .features{
       flex-direction: column;
+    }
+    .feature-img img{
+      width: 100%;
     }
 }
